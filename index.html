@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row align-items-center min-vh-50">
+    <div class="col-md-6">
+        <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
+        <p class="lead">Hi, I'm a Software Developer passionate about creating amazing web applications.</p>
+        <div class="mt-4">
+            <a href="/projects" class="btn btn-primary me-3">View My Work</a>
+            <a href="/contact" class="btn btn-outline-dark">Get in Touch</a>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <img src="{{ url_for('static', filename='img/profile.jpg') }}" 
+             alt="Profile Picture" 
+             class="img-fluid rounded-circle shadow"
+             style="max-width: 300px;">
+    </div>
+</div>
+
+<section class="my-5">
+    <h2 class="text-center mb-4">Featured Skills</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                    <h3 class="card-title h5">Web Development</h3>
+                    <p class="card-text">Experienced in building responsive and dynamic web applications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
+                    <h3 class="card-title h5">Mobile Development</h3>
+                    <p class="card-text">Creating cross-platform mobile applications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-database fa-3x mb-3 text-primary"></i>
+                    <h3 class="card-title h5">Database Design</h3>
+                    <p class="card-text">Proficient in database design and management.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

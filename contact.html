@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="text-center mb-4">Get in Touch</h1>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
+                        <h3 class="h5">Email</h3>
+                        <p><a href="mailto:your.email@example.com" class="text-decoration-none">your.email@example.com</a></p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <i class="fab fa-linkedin fa-2x text-primary mb-2"></i>
+                        <h3 class="h5">LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/yourusername" target="_blank" class="text-decoration-none">linkedin.com/in/yourusername</a></p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fab fa-github fa-2x text-primary mb-2"></i>
+                        <h3 class="h5">GitHub</h3>
+                        <p><a href="https://github.com/yourusername" target="_blank" class="text-decoration-none">github.com/yourusername</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="h4 mb-4">Send me a message</h2>
+                <form action="/contact" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
